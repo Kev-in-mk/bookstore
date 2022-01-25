@@ -166,3 +166,4 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 # Django crispy forms
 CRISPY_FORMS_TEMPLATE = 'bootstrap4'
+DEFAULT_FROM_EMAIL = 'kevin@bookstore.com'
