@@ -4,6 +4,8 @@ services:
   web:
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
+    env_file:
+      - db.env
     volumes:
       - .:/code
     ports:
@@ -11,9 +13,12 @@ services:
     depends_on:
       - db
   db:
+
     environment:
       POSTGRES_PASSWORD: 11072006
     image: postgres:11
+    env_file:
+      - db.env
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 volumes:

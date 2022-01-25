@@ -104,11 +104,18 @@ WSGI_APPLICATION = 'bookstore_project.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'postgres', # os.environ.get('DB_NAME'),
+        # 'USER': 'postgres', # os.environ.get('DB_USER'),
+        # 'PASSWORD': '11072006', # os.environ.get('DB_PASS'),
+        # 'HOST': 'db', # os.environ.get('DB_HOST'),
+        # 'PORT': 5432
+
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '11072006',
-        'HOST': 'db',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': 5432
     }
 }

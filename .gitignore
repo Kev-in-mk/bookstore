@@ -1,0 +1,4 @@
+# Environments
+.env
+
+db.sqlite3
