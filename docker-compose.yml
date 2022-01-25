@@ -13,9 +13,6 @@ services:
     depends_on:
       - db
   db:
-
-    environment:
-      POSTGRES_PASSWORD: 11072006
     image: postgres:11
     env_file:
       - db.env
